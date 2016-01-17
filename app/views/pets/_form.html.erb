@@ -1,0 +1,19 @@
+
+<section id="pets-form">
+  <%= form_for [@user, @pet] do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :species %>
+    <%= f.text_field :species %>
+    <br>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+    <br>
+    <%= f.submit 'save' %>
+     
+    <%= link_to('Cancel',user_pets_path) %>
+
+  <% end %>
+</section>
