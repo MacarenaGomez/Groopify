@@ -21,7 +21,7 @@ class PetsController < ApplicationController
     @user = current_user
     @pet = current_user.pets.new(pet_params)
     if @pet.save
-      flash[:notice] = 'You have a new pet!'
+      flash[:notice] = 'Pet created'
       redirect_to(user_pets_path)
     else
       flash[:alert] = "Pet couldn't be saved"
@@ -39,7 +39,7 @@ class PetsController < ApplicationController
     @user = current_user
     @pet = Pet.find(params[:id])
     if @pet.update_attributes(pet_params)
-      flash[:notice] = "Pet updated!"
+      flash[:notice] = "Pet updated"
       redirect_to(user_pets_path)
     else
       flash[:alert] = "Pet couldn´t be updated"
