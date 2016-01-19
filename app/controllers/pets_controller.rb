@@ -48,10 +48,10 @@ class PetsController < ApplicationController
     end
   end
 
-  def show
-    @pet = Pet.find_by(id: params[:id]) || 
-    render_404(params)
-  end
+  # def show
+  #   @pet = Pet.find_by(id: params[:id]) || 
+  #   render_404(params)
+  # end
 
   def destroy
     @pet = Pet.find(params[:id])
