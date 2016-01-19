@@ -6,7 +6,7 @@
 
 <div class="row">
   <div class="col-xs-12 col-md-6">      
-    <table>
+    <table class="table">
       <thead>
         <tr>
           <th>Name</th>
@@ -21,7 +21,7 @@
             <td><%= pet.user.name %></td>
             <% if current_user.id == pet.user_id %>
               <td><%= link_to("Editar", edit_user_pet_path(current_user, pet)) %></td>
-              <td> </td>
+              <td>-</td>
               <td><%= link_to('Delete', user_pet_path(current_user, pet), method: :delete, data: {confirm: 'Are you sure?'}) %></td>
             <%end %>
             
@@ -30,18 +30,20 @@
       </tbody>
     </table>
 
+
     <br>
 
     <%= link_to 'New pet', new_user_pet_path(current_user) %>
   </div>
   
   <div class="col-xs-12 col-md-6 detail"> 
-    <div class="row">
-      <div class="col-xs-6 col-md-5" id="pet-photo">
+    <div class="row marco">
+      <div class="col-xs-6 col-md-6">
+        <img id="pet-photo" src"">
       </div>
       <div class="col-xs-6 col-md-6">
-        <h2 id="pet-name"></h2>
         <dl class="dl-horizontal">
+          <h2 id="pet-name"></h2>
           <dt>Species:</dt>
           <dd id="pet-species"></dd>
           <dt>Age:</dt>

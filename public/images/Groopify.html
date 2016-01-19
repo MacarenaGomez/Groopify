@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Groopify</title>
+  
+  <script src="./Groopify_files/jquery.min.js"></script> 
+  <script src="./Groopify_files/jquery-ui.js"></script>
+
+  <link rel="stylesheet" href="./Groopify_files/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./Groopify_files/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <script src="./Groopify_files/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  
+
+  <link rel="stylesheet" media="all" href="./Groopify_files/pets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+<link rel="stylesheet" media="all" href="./Groopify_files/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+<link rel="stylesheet" media="all" href="./Groopify_files/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css">
+  <script src="./Groopify_files/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js"></script>
+<script src="./Groopify_files/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js"></script>
+<script src="./Groopify_files/init.self-4a40b6126a40b6b1b5d066a5b3b48ff0fa4728af2a02908b237812b9de9fa9de.js"></script>
+<script src="./Groopify_files/ajax.self-a1a19228eaa650acbb1919d42da66e3724533fa9b9e0e07a86a53f4f19a6c726.js"></script>
+<script src="./Groopify_files/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js"></script>
+<script src="./Groopify_files/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js"></script>
+<script src="./Groopify_files/jquery-ui.self-e30edaa23f3f0a73dd1fa3394a238dcb26c81b02702461112f7fbf501abc9415.js"></script>
+<script src="./Groopify_files/pets.self-a8ef207de263dead9038080aa5bde57b77f529469520472fb64712aaea1d7870.js"></script>
+<script src="./Groopify_files/selectize.min.self-00e014a504e6895a91360810471550ae76878d30732deff4b23e6f7ae74b0b1c.js"></script>
+<script src="./Groopify_files/tweets.self-2d48636b8f8e39e626a52fa9fe956152c5c17d64bb586ea2bd5489932d7e3538.js"></script>
+<script src="./Groopify_files/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js"></script>
+<script src="./Groopify_files/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js"></script>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="brqmmGBmw3n4QbtxrRgD0nzkEoVefa0TbTOOQVZoG5G/l2OAWxQElFvbvH2nw/LZk0Pv1OyWqiEOYQ9/mU68mQ==">
+</head>
+<body cz-shortcut-listen="true">
+
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">      
+
+
+        <p class="navbar-text pull-left">
+          <a class="navbar-link" href="http://localhost:3000/users/sign_up">Sign up</a> |
+          <a class="navbar-link" href="http://localhost:3000/users/sign_in">Login</a>
+
+      </p></div>
+    </div>
+  </div>
+</header>
+
+<section class="cuerpo">
+  <div class="container">  
+    <div class="row">
+      <div class="col-xs-12 col-md-12">      
+        <div class="row">
+  <div class="col-md-8 col-md-offset-2">
+  <h2>Log in</h2>
+
+  <form class="form-horizontal" id="new_user" action="http://localhost:3000/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="brqmmGBmw3n4QbtxrRgD0nzkEoVefa0TbTOOQVZoG5G/l2OAWxQElFvbvH2nw/LZk0Pv1OyWqiEOYQ9/mU68mQ==">
+    <div class="form-group">
+      <div>
+        <label class="col-sm-2 control-label" for="user_email">Email</label><br>
+        <div class="col-sm-10">
+        <input autofocus="autofocus" class="form-control" type="email" value="" name="user[email]" id="user_email">
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="user_password">Password</label><br>
+      <input autocomplete="off" type="password" name="user[password]" id="user_password">
+    </div>
+
+      <div class="field">
+        <input name="user[remember_me]" type="hidden" value="0"><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me">
+        <label for="user_remember_me">Remember me</label>
+      </div>
+
+    <div class="actions">
+      <input type="submit" name="commit" value="Log in">
+    </div>
+</form>
+  
+  <a href="http://localhost:3000/users/sign_up">Sign up</a><br>
+
+  <a href="http://localhost:3000/users/password/new">Forgot your password?</a><br>
+
+
+
+
+
+  </div>
+</div>
+
+<div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Spotify searcher</h1>
+        <form class="js-form">
+          <fieldset class="form-group">
+            <label for="artist">Song </label>
+            <input type="text" name="artist" id="js-artist" class="form-control">
+          </fieldset>
+          <button class="btn btn-info">SEARCH</button>
+        </form>
+      </div>
+    </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+</body></html>

@@ -3,14 +3,13 @@ class PetsController < ApplicationController
   before_action :authenticate_user!
 
   def index    
-
-      @pets = Pet.all
-
+    @pets = Pet.all
   end
 
   def json
     pet = Pet.find_by_id(params[:id])
-    render status:200, json:pet
+    image_url = pet.image.url(:medium)
+    render status:200, json:{pet: pet, url:image_url}
   end
 
   def new
@@ -50,10 +49,8 @@ class PetsController < ApplicationController
   end
 
   def show
-    @pet = Pet.find_by(id: params[:id]) 
-binding.pry
-    # || 
-    # render_404(params)
+    @pet = Pet.find_by(id: params[:id]) || 
+    render_404(params)
   end
 
   def destroy
@@ -66,7 +63,7 @@ binding.pry
   private
 
   def pet_params
-    params.require(:pet).permit(:name, :species, :age, :avatar)
+    params.require(:pet).permit(:name, :species, :age, :image)
   end
 
 end

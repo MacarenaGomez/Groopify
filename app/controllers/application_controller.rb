@@ -6,6 +6,11 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+  def render_404(params)
+    Rails.logger.warn("Tried to access #{params} which did not exist.")
+    render "layouts/404"
+  end
+
   protected
 
       def configure_permitted_parameters

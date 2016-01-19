@@ -1,17 +1,20 @@
 
 <section id="pets-form">
-  <%= form_for [@user, @pet] do |f| %>
+
+  <%= form_for [@user, @pet], html: { multipart: true } do |f| %>
 
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class:'form-control'%>
     <br>
     <%= f.label :species %>
-    <%= f.text_field :species %>
+    <%= f.text_field :species, class:'form-control' %>
     <br>
     <%= f.label :age %>
-    <%= f.number_field :age %>
+    <%= f.number_field :age, class:'form-control' %>
     <br>
-    <%= f.submit 'save' %>
+    <%= f.file_field :image, class:'form-control' %>
+    <br>
+    <%= f.submit 'save', class:'btn btn-info' %>
      
     <%= link_to('Cancel',user_pets_path) %>
 
